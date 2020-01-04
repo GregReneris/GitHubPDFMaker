@@ -1,0 +1,26 @@
+{
+  "name": "githubpdfmaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregReneris/GitHubPDFMaker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GregReneris/GitHubPDFMaker/issues"
+  },
+  "homepage": "https://github.com/GregReneris/GitHubPDFMaker#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^7.0.1",
+    "util": "^0.12.1"
+  },
+  "devDependencies": {}
+}
