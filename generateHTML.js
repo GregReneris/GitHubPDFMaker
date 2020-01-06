@@ -268,26 +268,25 @@ inquirer
           console.log ("the file was written");
         } );
 
-        axios( {
-            method: "post",
-            url: "http://api.html2pdfrocket.com/pdf?apikey=cdadb1ff-7374-42bf-8909-f67307f95feb",
-            data: {
-              //apikey: "cdadb1ff-7374-42bf-8909-f67307f95feb",
-              value: encodeURIComponent(generatedHTML)
-            }
-            //headers: {
-            //  "Content-Type": "application/x-www-form-urlencoded"
-            //}
-          })            
-          .then(function(r){
-            //console.log("Got here past the axios call");
-            //console.log(r);
-            fs.writeFile("created.pdf", r.data, function(err){
-              if (err) throw err;
-              console.log("made the pdf file.");
-            })
-          });
+//AXIOS UNDERNEATH COMMENTED OUT.
 
+        // axios( {
+        //     method: "get",
+        //     url: "http://api.html2pdfrocket.com/pdf",
+        //     responsetype: "stream",
+        //     params: {
+        //       apikey: "cdadb1ff-7374-42bf-8909-f67307f95feb",
+        //       value: generatedHTML
+        //     }
+        //   })            
+        //   .then(function (response) {
+        //     response.data.pipe(fs.createWriteStream('created.pdf'));
+        //     console.log("created.pdf written");
+        //     })
+        //   });
+
+
+        
 
         //self.req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         //self.req.responseType = "blob";
