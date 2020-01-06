@@ -2,8 +2,9 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
 const util = require("util");
+const pdfcrowd = require("pdfcrowd");
 
-
+//676427443af5ed7d511d4d0c472e3553
 
 const colors = {
   green: {
@@ -311,26 +312,39 @@ inquirer
           console.log ("the file was written");
         } ); 
 
-// AXIOS UNDERNEATH COMMENTED OUT.
+        // axios( {
+        //     method: "get",
+        //     url: "http://api.html2pdfrocket.com/pdf",
+        //     responseType: "stream",
+        //     params: {
+        //       apikey: "cdadb1ff-7374-42bf-8909-f67307f95feb",
+        //       value: generatedHTML,
+        //       UsePrintStylesheet: true,
+        //     }
+        //   })            
+        //   .then(function (response) {
+        //     response.data.pipe(fs.createWriteStream('created.pdf'));
+        //     console.log("created.pdf written");
+        //     })
+        //   });
 
-        axios( {
-            method: "get",
-            url: "http://api.html2pdfrocket.com/pdf",
-            responseType: "stream",
-            params: {
-              apikey: "cdadb1ff-7374-42bf-8909-f67307f95feb",
-              value: generatedHTML,
-              UsePrintStylesheet: true,
-            }
-          })            
-          .then(function (response) {
-            response.data.pipe(fs.createWriteStream('created.pdf'));
-            console.log("created.pdf written");
-            })
-          });
+
+        // create the API client instance
+        var client = new pdfcrowd.HtmlToPdfClient("GregReneris", "676427443af5ed7d511d4d0c472e3553");
+        client.setPageHeight("-1");
+
+        // run the conversion and write the result to a file
+        client.convertStringToFile(
+            generatedHTML,
+            username+".pdf",
+            function(err, fileName) {
+                if (err) return console.error("Pdfcrowd Error: " + err);
+                console.log("Success: the file was created " + fileName);
+            });
+          
       
       
-    //})
+    })
 
 
 
@@ -340,4 +354,4 @@ inquirer
 
 
 
-
+  

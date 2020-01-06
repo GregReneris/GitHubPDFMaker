@@ -20,6 +20,7 @@
     "axios": "^0.19.0",
     "fs": "0.0.1-security",
     "inquirer": "^7.0.1",
+    "pdfcrowd": "^4.11.0",
     "util": "^0.12.1"
   },
   "devDependencies": {}
