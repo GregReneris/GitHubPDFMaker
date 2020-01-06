@@ -76,7 +76,7 @@ inquirer
       // data.bio = owner.bio;
 
       data = {
-        color: 'green',
+        color: 'pink',
         url: 'https://api.github.com/users/GregReneris',
         following: 3,
         avatar: 'https://avatars2.githubusercontent.com/u/56899750?v=4',
@@ -108,20 +108,70 @@ inquirer
               <title>Document</title>
             
               
-              <body>
-                <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4">Hi! My name is ${data.name}</h1>
-                  <p class="lead">I am from ${data.location}.</p>
-                  <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-                  <ul class="list-group">
-                    <li class="list-group-item">My GitHub username is ${data.github}</li>
-                    <li class="list-group-item">LinkedIn: ${data.linkedin}</li>
-                  </ul>
+              <body class ="wrapper">
+               
+              
+
+                  
+
+              <div class="container">
+                
+                <div class ="photo-header">
+                  <img src="https://avatars2.githubusercontent.com/u/56899750?v=4" alt="">
+                  
+                  
+                <h1>Hi!</h1> 
+                <h2>My name is Greg Reneris</h2>
+                <h6>Currently at Seattle, Washington or Seattle, Washington </h6>
+                
+                <div class="links-nav">
+                  <a class="nav-link" href="Seattle, Washington"> location </a>
+                  <a class="nav-link" href="https://api.github.com/users/GregReneris">GitHub!</a>
+                  <a class="nav-link" href=""> Blog </a>  
+                </div>
                 </div>
               </div>
-              </body>
-              
+
+              <div>
+                <div class = "container">
+                 <main>
+                  <h3 align="center" >I'm developing my skills as a full-stack developer.</h3>
+                  <br>
+                  
+                <div class="row">
+                  <div class="col">
+                    <div class="card">
+                      <p>Public Repositories</p>
+                      <p>12</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <p>Followers</p>
+                      <p>undefined</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="card">
+                      <p>Git Stars</p>
+                      <p> {r[3].data}</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <p>Following</p>
+                      <p>undefined</p>
+                    </div>
+                  </div>
+                </div> 
+                <div class="wrapper">
+                </main>
+            </div>               
+            
+         
+          </body>              
         
               <style>
                   @page {
