@@ -311,32 +311,26 @@ inquirer
           console.log ("the file was written");
         } ); 
 
-//AXIOS UNDERNEATH COMMENTED OUT.
+// AXIOS UNDERNEATH COMMENTED OUT.
 
-        // axios( {
-        //     method: "get",
-        //     url: "http://api.html2pdfrocket.com/pdf",
-        //     responsetype: "stream",
-        //     params: {
-        //       apikey: "cdadb1ff-7374-42bf-8909-f67307f95feb",
-        //       value: generatedHTML
-        //     }
-        //   })            
-        //   .then(function (response) {
-        //     response.data.pipe(fs.createWriteStream('created.pdf'));
-        //     console.log("created.pdf written");
-        //     })
-        //   });
-
-
-        
-
-        //self.req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        //self.req.responseType = "blob";
-
-      //}
+        axios( {
+            method: "get",
+            url: "http://api.html2pdfrocket.com/pdf",
+            responseType: "stream",
+            params: {
+              apikey: "cdadb1ff-7374-42bf-8909-f67307f95feb",
+              value: generatedHTML,
+              UsePrintStylesheet: true,
+            }
+          })            
+          .then(function (response) {
+            response.data.pipe(fs.createWriteStream('created.pdf'));
+            console.log("created.pdf written");
+            })
+          });
       
-    })
+      
+    //})
 
 
 
