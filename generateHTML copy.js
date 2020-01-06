@@ -119,9 +119,9 @@ inquirer
                 <h6>Currently at ${data.location}</h6>
                 
                 <div class="links-nav">
-                  <a class="nav-link" href="${data.location_url}"> ${data.location} </a>
-                  <a class="nav-link" href="${data.url}">GitHub</a>
-                  <a class="nav-link" href="${data.blog}"> Blog </a>  
+                  <a class="nav-link" href="${data.location_url}"> <i class="fas fa-location-arrow"></i> ${data.location}  </a>
+                  <a class="nav-link" href="${data.url}"> <i class="fab fa-github"></i> GitHub</a>
+                  <a class="nav-link" href="${data.blog}"> <i class="fas fa-blog"></i> Blog </a>   
                 </div>
                 </div>
               </div>
